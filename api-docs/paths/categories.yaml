@@ -1,0 +1,47 @@
+post:
+  tags:
+    - Categories
+  summary: Add new category
+  consumes:
+    - "application/json"
+  produces:
+    - "application/json"
+  parameters:
+    - $ref: '../components/parameters/categoryName.yaml'
+  responses:
+    200:
+      $ref: '../components/responses/categorySuccess.yaml'
+    400:
+      $ref: '../components/responses/categoryFail.yaml'
+  security:
+    - bearerAuth: []
+get:
+  tags:
+    - Categories
+  summary: Get all categories
+  produces:
+    - "application/json"
+  responses:
+    200:
+      description: A list of categories
+      schema:
+        type: array
+        items:
+          type: object
+          properties:
+            id:
+              type: integer
+              example: 1
+            name:
+              type: string
+              example: "Category 1"
+    400:
+      description: Bad request
+      schema:
+        type: object
+        properties:
+          errors:
+            type: string
+            example: "Something went wrong"
+  security:
+    - bearerAuth: []

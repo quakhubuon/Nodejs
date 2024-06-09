@@ -1,0 +1,19 @@
+swagger: "2.0"
+info:
+  description: Example of Swagger
+  version: 1.0.0
+  title: Swagger Demo
+schemes:
+  - http
+tags:
+  - name: Categories
+    description: Everything about categories
+paths:
+  /categories:
+    $ref: './paths/categories.yaml'
+securityDefinitions:
+  bearerAuth:
+    type: apiKey
+    name: Authorization
+    in: header
+    description: "Enter your bearer token in the format **Bearer <token>**"

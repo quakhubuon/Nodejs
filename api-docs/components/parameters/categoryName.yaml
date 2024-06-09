@@ -1,0 +1,9 @@
+in: body
+name: data
+description: New category info
+schema:
+  type: object
+  properties:
+    CategoryName:
+      type: string
+      example: "Category 1"

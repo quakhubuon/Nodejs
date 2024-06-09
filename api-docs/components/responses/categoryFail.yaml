@@ -1,0 +1,7 @@
+description: Create category fail
+schema:
+  type: object
+  properties:
+    errors:
+      type: string
+      example: "Something went wrong"

@@ -1,0 +1,8 @@
+description: Create category success
+schema:
+  type: object
+  properties:
+    CategoryName:
+      type: string
+      example: "Category 1"
+
